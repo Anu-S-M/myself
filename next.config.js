@@ -1,8 +1,3 @@
-/**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
- * for Docker builds.
- */
-await import("./src/env.js");
 import WithPWA from "next-pwa";
 
 const withPWA = WithPWA({
@@ -10,7 +5,6 @@ const withPWA = WithPWA({
   disable: process.env.NODE_ENV === "development",
   register: true,
   scope: "/",
-  sw: "service-worker.js",
 });
 
 /**
